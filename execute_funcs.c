@@ -12,16 +12,13 @@
 void execute_printer(int ac, char **av, size_t center)
 {
 	void (*printer)(size_t) = NULL;
-	/**animal_handlers printer_funcs[] = {
+	animal_handlers printer_funcs[] = {
 		{"cow", print_cow},
-		{"dragon", print_dragon},
-		{"duck", print_duck},
-		{"tux", print_tux}
+		{"dragon", print_dragon}
 	};
-	**/
 	if (ac == 2)
 		printer = print_cow;
-	/**else
+	else
 	{
 		char *animal;
 		int i;
@@ -30,7 +27,7 @@ void execute_printer(int ac, char **av, size_t center)
 			animal = av[2];
 		else
 			animal = av[3];
-		for (i = 0; i < 4; i++)
+		for (i = 0; i < 2; i++)
 		{
 			if (!_strcmp(animal, printer_funcs[i].animal))
 			{
@@ -38,6 +35,6 @@ void execute_printer(int ac, char **av, size_t center)
 				break;
 			}
 		}
-		}**/
+	}
 	printer(center);
 }

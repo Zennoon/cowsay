@@ -18,5 +18,5 @@ void print_cow(size_t center)
 	print_spaces(center + 7, NULL);
 	printf("||----w||\n");
 	print_spaces(center + 7, NULL);
-	printf("||     ||\n");
+	printf("||     ||"RESET"\n");
 }
