@@ -1,25 +1,27 @@
 #include "main.h"
 
 /**
- * execute_funcs - Executes the appropriate function for the given animal
+ * execute_printer - Executes the appropriate function for the given animal
  * @ac: Argument Count (from main)
  * @av: Argument Vector (from main)
+ * @center: The offset of the center of the message from the edge of the
+ * terminal, used by the printing functions
  *
  * Return: void
  */
-void execute_funcs(int ac, char **av)
+void execute_printer(int ac, char **av, size_t center)
 {
-	void (*printer)(void) = NULL;
-	animal_handlers printer_funcs[] = {
+	void (*printer)(size_t) = NULL;
+	/**animal_handlers printer_funcs[] = {
 		{"cow", print_cow},
 		{"dragon", print_dragon},
 		{"duck", print_duck},
 		{"tux", print_tux}
 	};
-
+	**/
 	if (ac == 2)
 		printer = print_cow;
-	else
+	/**else
 	{
 		char *animal;
 		int i;
@@ -36,6 +38,6 @@ void execute_funcs(int ac, char **av)
 				break;
 			}
 		}
-	}
-	printer();
+		}**/
+	printer(center);
 }

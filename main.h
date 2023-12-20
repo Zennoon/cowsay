@@ -13,13 +13,18 @@
 #define RESET "\e[0;39m"
 
 /** function prototypes **/
+void execute_printer(int, char **, size_t);
+void print_cow(size_t);
+
+
+/** utility functions **/
 size_t _strlen(char *);
 int _strcmp(char *, char *);
 void print_spaces(int, char *);
 void print_char(char, int, char *);
-void print_message(char *);
-/** structs **/
+size_t print_message(char *);
 
+/** structs **/
 /**
  * struct animal_handlers - Holds different functions that handle printing
  * different animals
@@ -29,7 +34,7 @@ void print_message(char *);
 struct animal_handlers
 {
 	char *animal;
-	void (*func)();
+	void (*func)(size_t);
 };
 typedef struct animal_handlers animal_handlers;
 #endif

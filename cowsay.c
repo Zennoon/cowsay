@@ -9,7 +9,7 @@
  */
 int main(int ac, char **av)
 {
-	void (*func)(void);
+	size_t center;
 
 	if (!(ac == 2 || ac == 4))
 	{
@@ -17,19 +17,19 @@ int main(int ac, char **av)
 		return (EXIT_FAILURE);
 	}
 	if (ac == 2)
-		print_message(av[1]);
+		center = print_message(av[1]);
 	else
 	{
 		if (!_strcmp(av[1], "-f"))
-			print_message(av[3]);
+			center = print_message(av[3]);
 		else if (!_strcmp(av[2], "-f"))
-			print_message(av[1]);
+			center = print_message(av[1]);
 		else
 		{
 			printf("Usage: %s MESSAGE [-f ANIMAL]\n", av[0]);
 			return (EXIT_FAILURE);
 		}
 	}
-/**	execute_printer(ac, av);**/
+	execute_printer(ac, av, center);
 	return (0);
 }

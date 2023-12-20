@@ -6,11 +6,11 @@ void print_multiline(char *, int);
  * print_message - Prints the message given as a command line argument
  * @message: The message to print
  *
- * Return: void
+ * Return: The center of the message (half the width)
  */
-void print_message(char *message)
+size_t print_message(char *message)
 {
-	size_t len = _strlen(message), i = 0;
+	size_t len = _strlen(message), i = 0, center = 0;
 
 	if (len <= 60)
 	{
@@ -25,11 +25,14 @@ void print_message(char *message)
 		printf("/\n  ");
 		print_char('-', len + 2, NULL);
 		printf("\n");
+		center = (len / 2) + 3;
 	}
 	else
 	{
 		print_multiline(message, len);
+		center = 35;
 	}
+	return (center);
 }
 
 /**
@@ -55,9 +58,7 @@ void print_multiline(char *message, int len)
 	{
 		write(1, " |  ", 4);
 		if (len - index >= 60)
-		{
 			written = write(1, &message[index], 60);
-		}
 		else
 			written = write(1, &message[index], len - index);
 		if (written == 60)
