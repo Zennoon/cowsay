@@ -51,6 +51,7 @@ void print_cat(size_t);
 void print_cow(size_t);
 void print_dragon(size_t);
 void print_duck(size_t);
+void print_fish(size_t);
 void print_rabbit(size_t);
 void print_spider(size_t);
 

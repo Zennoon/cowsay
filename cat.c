@@ -27,4 +27,5 @@ void print_cat(size_t center)
 	printf("| |_| |_| |\n");
 	print_spaces(center + 5, NULL);
 	printf("(_| (_| (_|\n\n");
+	print_message("Art done by Zennoon");
 }
