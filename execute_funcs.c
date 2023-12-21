@@ -14,10 +14,12 @@ void execute_printer(int ac, char **av, size_t center)
 	int i;
 	void (*printer)(size_t) = NULL;
 	animal_handlers printer_funcs[] = {
+		{"bat", print_bat},
 		{"cow", print_cow},
 		{"dragon", print_dragon},
 		{"duck", print_duck},
-		{"rabbit", print_rabbit}
+		{"rabbit", print_rabbit},
+		{"spider", print_spider}
 	};
 	if (ac == 2)
 		printer = print_cow;
@@ -29,12 +31,12 @@ void execute_printer(int ac, char **av, size_t center)
 			animal = av[2];
 		else
 			animal = av[3];
-		for (i = 0; i < 4; i++)
-		{
-			if (!_strcmp(animal, printer_funcs[i].animal))
-			{
-				printer = printer_funcs[i].func;
-				break;
+       		for (i = 0; i < 6; i++)
+	       	{
+	       		if (!_strcmp(animal, printer_funcs[i].animal))
+		       	{
+		       		printer = printer_funcs[i].func;
+			       	break;
 			}
 		}
 	}
@@ -44,7 +46,7 @@ void execute_printer(int ac, char **av, size_t center)
 		printer(center);
 		printf("Unavailable / Invalid animal name. ");
 		printf("Available animals are: \n");
-		for (i = 0; i < 4; i++)
+		for (i = 0; i < 6; i++)
 		{
 			printf("\t%s\n", printer_funcs[i].animal);
 		}
