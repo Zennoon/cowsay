@@ -48,7 +48,8 @@
 void execute_printer(int, char **, size_t);
 void print_cow(size_t);
 void print_dragon(size_t);
-
+void print_duck(size_t);
+void print_rabbit(size_t);
 
 /** utility functions **/
 size_t _strlen(char *);

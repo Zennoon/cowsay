@@ -51,7 +51,7 @@ void print_spaces(int num, char *color)
 		if (color == NULL)
 			printf(" ");
 		else
-			printf(WHT " " RESET "");
+			printf(WHTB " " RESET "");
 }
 
 /**
@@ -70,5 +70,5 @@ void print_char(char c, int num, char *color)
 		if (color == NULL)
 			printf("%c", c);
 		else
-			printf(WHT "%c" RESET "", c);
+			printf(WHTB "%c" RESET "", c);
 }
