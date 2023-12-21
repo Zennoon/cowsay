@@ -47,6 +47,7 @@
 /** function prototypes **/
 void execute_printer(int, char **, size_t);
 void print_bat(size_t);
+void print_cat(size_t);
 void print_cow(size_t);
 void print_dragon(size_t);
 void print_duck(size_t);
