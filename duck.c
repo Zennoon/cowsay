@@ -47,5 +47,5 @@ void print_duck(size_t center)
 	printf("~^~^~^~^~^ `________________' ~^~^~^~^~^\n");
 	print_spaces(center + 1, NULL);
 	printf("~^~^~^~^~^~^~^^~^~^~^~^~^~^~^~^~^~^~^~^~\n\n");
-	print_message("Art inspired by Joan Stark (www.asciiart.eu)");
+	print_message("Art by Joan Stark (www.asciiart.eu)");
 }

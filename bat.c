@@ -39,5 +39,5 @@ void print_bat(size_t center)
 	printf("'.    .'\n");
 	print_spaces(center + 9, NULL);
 	printf("`\\/`\n\n");
-	print_message("Art inspired by jgs (www.asciiart.eu)");
+	print_message("Art by Joan Stark (www.asciiart.eu)");
 }

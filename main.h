@@ -49,11 +49,17 @@ void execute_printer(int, char **, size_t);
 void print_bat(size_t);
 void print_cat(size_t);
 void print_cow(size_t);
+void print_dog(size_t);
 void print_dragon(size_t);
 void print_duck(size_t);
 void print_fish(size_t);
+void print_frog(size_t);
 void print_rabbit(size_t);
+void print_seahorse(size_t);
+void print_shark(size_t);
+void print_snake(size_t);
 void print_spider(size_t);
+void print_whale(size_t);
 
 /** utility functions **/
 size_t _strlen(char *);
