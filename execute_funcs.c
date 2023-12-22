@@ -20,8 +20,12 @@ void execute_printer(int ac, char **av, size_t center)
 		{"dog", print_dog},
 		{"dragon", print_dragon},
 		{"duck", print_duck},
+		{"elephant", print_elephant},
 		{"fish", print_fish},
 		{"frog", print_frog},
+		{"horse", print_horse},
+		{"monkey", print_monkey},
+		{"mouse", print_mouse},
 		{"rabbit", print_rabbit},
 		{"seahorse", print_seahorse},
 		{"shark", print_shark},
@@ -39,7 +43,7 @@ void execute_printer(int ac, char **av, size_t center)
 			animal = av[2];
 		else
 			animal = av[3];
-       		for (i = 0; i < 14; i++)
+       		for (i = 0; i < 18; i++)
 	       	{
 	       		if (!_strcmp(animal, printer_funcs[i].animal))
 		       	{
@@ -54,7 +58,7 @@ void execute_printer(int ac, char **av, size_t center)
 		printer(center);
 		printf("Unavailable / Invalid animal name. ");
 		printf("Available animals are: \n");
-		for (i = 0; i < 14; i++)
+		for (i = 0; i < 18; i++)
 		{
 			printf("\t%s\n", printer_funcs[i].animal);
 		}
